@@ -1,0 +1,48 @@
+{
+  "id": "6abfc6af-d59b-4717-9c99-c0f0fc41ba32",
+  "version": "2.0",
+  "name": "HM",
+  "url": "https://www2.hm.com",
+  "tests": [{
+    "id": "11df923b-10af-464d-b18e-c29ab6b66df7",
+    "name": "testing",
+    "commands": [{
+      "id": "76959567-3d56-4bfb-b550-5650eaab890f",
+      "comment": "",
+      "command": "open",
+      "target": "/sv_se/index.html?orgtld=hm.se",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81076a43-6e85-4297-ac77-b3615b36d979",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4b9d4b6-f41c-4dc0-ae2c-3f6d357ef0d9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Logga in",
+      "targets": [
+        ["linkText=Logga in", "linkText"],
+        ["css=.menu__myhm:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Logga in')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "08ef80d8-b0ae-4c30-9cc2-a9e329d7468c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["11df923b-10af-464d-b18e-c29ab6b66df7"]
+  }],
+  "urls": ["https://www2.hm.com/"],
+  "plugins": []
+}
