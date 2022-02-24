@@ -4,40 +4,16 @@
   "name": "HM",
   "url": "https://www2.hm.com/sv_se/index.html?orgtld=hm.se",
   "tests": [{
-    "id": "11df923b-10af-464d-b18e-c29ab6b66df7",
-    "name": "testing",
-    "commands": [{
-      "id": "76959567-3d56-4bfb-b550-5650eaab890f",
-      "comment": "",
-      "command": "open",
-      "target": "/sv_se/index.html?orgtld=hm.se",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "81076a43-6e85-4297-ac77-b3615b36d979",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "550x691",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a4b9d4b6-f41c-4dc0-ae2c-3f6d357ef0d9",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=Logga in",
-      "targets": [
-        ["linkText=Logga in", "linkText"],
-        ["css=.menu__myhm:nth-child(1)", "css:finder"],
-        ["xpath=//a[contains(text(),'Logga in')]", "xpath:link"],
-        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
-        ["xpath=//div/a", "xpath:position"]
-      ],
-      "value": ""
-    }]
-  }, {
     "id": "65455f0f-b3dd-4334-8475-dd8151c293ab",
     "name": "Homepage logo",
     "commands": [{
+      "id": "3fb5170c-a66b-4642-b669-dba5405a04c3",
+      "comment": "Testar om H&M loggan tar mig tillbaka till hemsidan som förväntat.",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "6510204e-bb1a-42fe-afd0-ce694eb20ddc",
       "comment": "",
       "command": "open",
@@ -152,6 +128,13 @@
     "id": "9e4b931f-976b-4f6b-a492-9f3d520d8ab8",
     "name": "shoppingcart",
     "commands": [{
+      "id": "8acdcab8-8756-4fa5-8ccb-8fa0ed99a56d",
+      "comment": "Testar om jag kan lägga till en vara i min kundkorg.",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "1e6d9de2-c4b2-4970-8250-4aa1f656d710",
       "comment": "",
       "command": "open",
@@ -282,6 +265,427 @@
         ["xpath=//span/a/span", "xpath:position"]
       ],
       "value": "1"
+    }, {
+      "id": "b4faf7ad-e3f0-49ff-a570-c9bf02265d28",
+      "comment": "Det gick INTE att lägga till en vara i min varukorg. ",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7821c72-1e54-4ff5-8aaa-005808b0cb36",
+      "comment": "Testet lyckades med att misslyckas.",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "737ba747-cbb6-4079-a8d6-cf183aec91ad",
+    "name": "Add favorites w/o logged in",
+    "commands": [{
+      "id": "9c635f6a-c698-4b83-a2ee-89d348d3d284",
+      "comment": "Testing to add a product to my favorites without being logged in",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "167c1353-35b8-4993-9be6-e0072722cd46",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu__trigger",
+      "targets": [
+        ["css=.menu__trigger", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dd501d0-aab4-44e5-b49e-54237728116a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu__super:nth-child(7) > .menu__super-link > span",
+      "targets": [
+        ["css=.menu__super:nth-child(7) > .menu__super-link > span", "css:finder"],
+        ["xpath=//ul[2]/li[7]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'H&M HOME')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca1bd21b-678e-44e4-94ad-467bebff2356",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Dekorationer",
+      "targets": [
+        ["linkText=Dekorationer", "linkText"],
+        ["css=.is-open > .menu--unfolded .menu__item:nth-child(3) > .menu__sub-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Dekorationer')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/home/produkter/dekoration.html')]", "xpath:href"],
+        ["xpath=//li[7]/ul/li[5]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Dekorationer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f038b250-4e7f-46e7-b6dc-9c426a9f222b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-item:nth-child(1) .favorite",
+      "targets": [
+        ["css=.product-item:nth-child(1) .favorite", "css:finder"],
+        ["xpath=//div[@id='page-content']/div/div[3]/ul/li/article/div/a/div/button", "xpath:idRelative"],
+        ["xpath=//a/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'SPARA SOM FAVORIT')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdcc6c50-9c69-4872-8017-b825258d6447",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Favoriter",
+      "targets": [
+        ["linkText=Favoriter", "linkText"],
+        ["css=.menu__favorites", "css:finder"],
+        ["xpath=//a[contains(text(),'Favoriter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/favourites')]", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2941848e-88ec-45ac-98cc-c733d2b6ed6d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logga in",
+      "targets": [
+        ["linkText=Logga in", "linkText"],
+        ["css=.menu__myhm:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Logga in')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "134399f9-3862-4a16-b6b0-61c2e2a1d405",
+      "comment": "",
+      "command": "type",
+      "target": "id=modal-txt-signin-email",
+      "targets": [
+        ["id=modal-txt-signin-email", "id"],
+        ["name=j_username", "name"],
+        ["css=#modal-txt-signin-email", "css:finder"],
+        ["xpath=//input[@id='modal-txt-signin-email']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "louise920@hotmail.com"
+    }, {
+      "id": "01835b34-5036-428b-b192-5dc2ec59d1c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=modal-txt-signin-password",
+      "targets": [
+        ["id=modal-txt-signin-password", "id"],
+        ["name=j_password", "name"],
+        ["css=#modal-txt-signin-password", "css:finder"],
+        ["xpath=//input[@id='modal-txt-signin-password']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f849c1c-7831-4bd7-b82a-c5ec2b91382c",
+      "comment": "",
+      "command": "click",
+      "target": "id=modal-txt-signin-password",
+      "targets": [
+        ["id=modal-txt-signin-password", "id"],
+        ["name=j_password", "name"],
+        ["css=#modal-txt-signin-password", "css:finder"],
+        ["xpath=//input[@id='modal-txt-signin-password']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "285c57ab-ff84-49ed-a8e3-a3390c4b3368",
+      "comment": "",
+      "command": "type",
+      "target": "id=modal-txt-signin-password",
+      "targets": [
+        ["id=modal-txt-signin-password", "id"],
+        ["name=j_password", "name"],
+        ["css=#modal-txt-signin-password", "css:finder"],
+        ["xpath=//input[@id='modal-txt-signin-password']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": "Myhysteria920"
+    }, {
+      "id": "40ae3878-b61f-4173-bdc7-8955f84eb0c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-set-session-storage",
+      "targets": [
+        ["css=.js-set-session-storage", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4a09d2a-d784-497e-9fe7-a410bf994803",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.js-set-session-storage",
+      "targets": [
+        ["css=.js-set-session-storage", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c19b3948-4a23-42c1-a7a5-c8ecf646b4cd",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.js-set-session-storage",
+      "targets": [
+        ["css=.js-set-session-storage", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f86130fe-02bc-40c1-8888-5b7eccd7ac58",
+      "comment": "",
+      "command": "assertChecked",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c4496621-f681-4307-807f-2cf11617847a",
+    "name": "Newly visited product",
+    "commands": [{
+      "id": "fabc8ece-6656-43e1-9ab5-155d4c5f9694",
+      "comment": "Testing to visit a product, then return to homepage and see if the product is added to \"recently visited\"",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccb71dd7-f4a0-4325-8573-b1e2a157bbff",
+      "comment": "",
+      "command": "open",
+      "target": "https://www2.hm.com/sv_se/index.html?orgtld=hm.se",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1c6b053-89ef-4d31-83a6-60c1f579d4d8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "971x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c581291-94bb-4613-9907-c87eb1469b36",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu__trigger",
+      "targets": [
+        ["css=.menu__trigger", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65c4f7f5-b418-4469-ab21-bd2669ea69d1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Dam",
+      "targets": [
+        ["linkText=Dam", "linkText"],
+        ["css=.menu__super:nth-child(2) > .menu__super-link", "css:finder"],
+        ["xpath=//a[contains(@href, '/sv_se/dam.html')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Dam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5200bba5-c478-44ef-89bc-cf8b3fe3a4bf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Toppar",
+      "targets": [
+        ["linkText=Toppar", "linkText"],
+        ["css=.is-open > .menu--unfolded .menu__item:nth-child(3) > .menu__sub-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Toppar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/dam/produkter/toppar.html')]", "xpath:href"],
+        ["xpath=//li[4]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Toppar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccb62fb0-9f3b-4cde-965c-9e126488070a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,266.79998779296875)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23468a24-beb5-4509-8940-9c3223d7c9f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-item:nth-child(1) .item-image",
+      "targets": [
+        ["css=.product-item:nth-child(1) .item-image", "css:finder"],
+        ["xpath=//img[@alt='Croppad topp med halvpoloModell']", "xpath:img"],
+        ["xpath=//div[@id='page-content']/div/div[3]/ul/li/article/div/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52ab4c53-4a02-480a-b348-cc4fa19272f0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=HM.com",
+      "targets": [
+        ["linkText=HM.com", "linkText"],
+        ["css=.menu__hm", "css:finder"],
+        ["xpath=//a[contains(@href, '/sv_se/index.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'HM.com')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "feaa2da1-fcf1-4138-bbc9-aaf9effe7a97",
+      "comment": "Ser efter om den finns med under \"nyligen besökta\"",
+      "command": "assertText",
+      "target": "linkText=Croppad topp med halvpolo",
+      "targets": [
+        ["linkText=Croppad topp med halvpolo", "linkText"],
+        ["css=.pra15:nth-child(1) .slick-slide:nth-child(1) .ProductDetails-module--ItemDetails__1b2Hu:nth-child(2) .CTA-module--action__3rYxf:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Croppad topp med halvpolo')]", "xpath:link"],
+        ["xpath=//main[@id='main-content']/div/div[3]/section[3]/hm-personalized-reco-carousel/div/div/div[2]/div/div/div/div/article/div[2]/div/h3/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/sv_se/productpage.1010546006.html')])[2]", "xpath:href"],
+        ["xpath=//h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Croppad topp med halvpolo')]", "xpath:innerText"]
+      ],
+      "value": "Croppad topp med halvpolo"
+    }]
+  }, {
+    "id": "48f26214-6ea7-4448-aa92-fc8d559890aa",
+    "name": "Log in with capslock activated",
+    "commands": [{
+      "id": "81a169c3-0400-4656-bb8d-634cf098f245",
+      "comment": "Testar att logga in med capslock aktiverat. Förväntar mig att det ska accepteras och att jag loggas in.",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50a73318-544b-40e4-862e-703e3f1a71a0",
+      "comment": "",
+      "command": "open",
+      "target": "https://www2.hm.com/sv_se/index.html?orgtld=hm.se",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ddd4814-5d40-4c2c-b541-40afc041ae11",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "971x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f8cb2aa-f6fc-416b-a5b5-389c4d1e585d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logga in",
+      "targets": [
+        ["linkText=Logga in", "linkText"],
+        ["css=.menu__myhm:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Logga in')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4eb6061b-501b-42c7-bb75-e4164a091a26",
+      "comment": "",
+      "command": "type",
+      "target": "id=modal-txt-signin-email",
+      "targets": [
+        ["id=modal-txt-signin-email", "id"],
+        ["name=j_username", "name"],
+        ["css=#modal-txt-signin-email", "css:finder"],
+        ["xpath=//input[@id='modal-txt-signin-email']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "LOUISE920@HOTMAIL.COM"
+    }, {
+      "id": "487c0909-e90a-4121-a7ff-dcd4a1db2930",
+      "comment": "",
+      "command": "click",
+      "target": "id=modal-txt-signin-password",
+      "targets": [
+        ["id=modal-txt-signin-password", "id"],
+        ["name=j_password", "name"],
+        ["css=#modal-txt-signin-password", "css:finder"],
+        ["xpath=//input[@id='modal-txt-signin-password']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "489231ee-c0ab-4107-b3da-e365a6902af0",
+      "comment": "",
+      "command": "type",
+      "target": "id=modal-txt-signin-password",
+      "targets": [
+        ["id=modal-txt-signin-password", "id"],
+        ["name=j_password", "name"],
+        ["css=#modal-txt-signin-password", "css:finder"],
+        ["xpath=//input[@id='modal-txt-signin-password']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": "MYHYSTERIA920"
+    }, {
+      "id": "6ce00d95-8a0c-40e2-89b0-dc4a0621176d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-set-session-storage",
+      "targets": [
+        ["css=.js-set-session-storage", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d713d686-0b08-4485-b6b9-3256f69f82a5",
+      "comment": "Det gick inte att logga in med capslock aktiverat. Inte som förväntat",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7379e7b-7abd-49f1-9124-0425383e8896",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=modal-txt-signin-password-unknown-error-type-error",
+      "targets": [
+        ["id=modal-txt-signin-password-unknown-error-type-error", "id"],
+        ["css=#modal-txt-signin-password-unknown-error-type-error", "css:finder"],
+        ["xpath=//span[@id='modal-txt-signin-password-unknown-error-type-error']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Fel e-postadress eller lösenord, försök igen.')]", "xpath:innerText"]
+      ],
+      "value": "Fel e-postadress eller lösenord, försök igen."
     }]
   }],
   "suites": [{
@@ -290,7 +694,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["11df923b-10af-464d-b18e-c29ab6b66df7"]
+    "tests": []
   }],
   "urls": ["https://www2.hm.com/", "https://www2.hm.com/sv_se/index.html?orgtld=hm.se"],
   "plugins": []
