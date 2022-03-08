@@ -111,6 +111,19 @@
       ],
       "value": ""
     }, {
+      "id": "39c48fb1-ea87-469c-bf30-19bc16def2ae",
+      "comment": "Check if H&M logo is available in corner when you leave homepage",
+      "command": "verifyElementPresent",
+      "target": "linkText=HM.com",
+      "targets": [
+        ["linkText=HM.com", "linkText"],
+        ["css=.menu__hm", "css:finder"],
+        ["xpath=//a[contains(@href, '/sv_se/index.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'HM.com')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
       "id": "e45bba3f-bfd7-44b5-91bb-dfc89b297bb0",
       "comment": "",
       "command": "click",
