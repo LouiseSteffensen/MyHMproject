@@ -589,7 +589,7 @@
     }]
   }, {
     "id": "48f26214-6ea7-4448-aa92-fc8d559890aa",
-    "name": "Log in with capslock activated",
+    "name": "Try log in with capslock activated",
     "commands": [{
       "id": "81a169c3-0400-4656-bb8d-634cf098f245",
       "comment": "Testar att logga in med capslock aktiverat. Förväntar mig att det ska accepteras och att jag loggas in.",
@@ -677,13 +677,6 @@
         ["xpath=//form[@id='modal-theLoginForm']/button", "xpath:idRelative"],
         ["xpath=//div/form/button", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "d713d686-0b08-4485-b6b9-3256f69f82a5",
-      "comment": "Det gick inte att logga in med capslock aktiverat. Inte som förväntat",
-      "command": "",
-      "target": "",
-      "targets": [],
       "value": ""
     }, {
       "id": "b7379e7b-7abd-49f1-9124-0425383e8896",
