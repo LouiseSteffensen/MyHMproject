@@ -1,0 +1,610 @@
+{
+  "id": "6abfc6af-d59b-4717-9c99-c0f0fc41ba32",
+  "version": "2.0",
+  "name": "HM",
+  "url": "https://www2.hm.com/sv_se/index.html",
+  "tests": [{
+    "id": "65455f0f-b3dd-4334-8475-dd8151c293ab",
+    "name": "Homepage logo",
+    "commands": [{
+      "id": "3fb5170c-a66b-4642-b669-dba5405a04c3",
+      "comment": "Testar om H&M loggan tar mig tillbaka till hemsidan som förväntat.",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6510204e-bb1a-42fe-afd0-ce694eb20ddc",
+      "comment": "",
+      "command": "open",
+      "target": "https://www2.hm.com/sv_se/index.html?orgtld=hm.se",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b611de6a-9d40-43e3-a924-508c244ae088",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "971x1045",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4061ed13-dc25-43b5-826c-6d102c5d64c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu__trigger",
+      "targets": [
+        ["css=.menu__trigger", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14831c95-22eb-4edb-b85f-327c1bcb32bb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.menu__super:nth-child(2) > .menu__super-link > span",
+      "targets": [
+        ["css=.menu__super:nth-child(2) > .menu__super-link > span", "css:finder"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Dam')]", "xpath:innerText"]
+      ],
+      "value": "Dam"
+    }, {
+      "id": "67ce0034-185f-47dd-9e32-e07a91029a3c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu__super:nth-child(2) > .menu__super-link > span",
+      "targets": [
+        ["css=.menu__super:nth-child(2) > .menu__super-link > span", "css:finder"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Dam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6d263f8-7562-4f9a-a5a6-247873431b83",
+      "comment": "",
+      "command": "click",
+      "target": "css=.is-open > .menu__block:nth-child(3) > .menu__heading",
+      "targets": [
+        ["css=.is-open > .menu__block:nth-child(3) > .menu__heading", "css:finder"],
+        ["xpath=//li[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Trending now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b15b7d97-dfb1-44fd-83e5-37f8cc07e0ec",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.is-open > .menu__block:nth-child(3) > .menu__heading",
+      "targets": [
+        ["css=.is-open > .menu__block:nth-child(3) > .menu__heading", "css:finder"],
+        ["xpath=//li[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Trending now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c8bf8e5-2781-4417-b1af-00588fdb25fb",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "linkText=Seamless träningskläder",
+      "targets": [
+        ["linkText=Seamless träningskläder", "linkText"],
+        ["css=.is-open > .menu__item:nth-child(3) > .menu__sub-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Seamless träningskläder')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/dam/sasong-trender/seamless.html')]", "xpath:href"],
+        ["xpath=//li[3]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Seamless träningskläder')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46180e1c-be73-419d-812b-0c4a825ade90",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=H&M Studio SS22",
+      "targets": [
+        ["linkText=H&M Studio SS22", "linkText"],
+        ["css=.is-open > .menu__item:nth-child(2) > .menu__sub-link", "css:finder"],
+        ["xpath=//a[contains(text(),'H&M Studio SS22')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/dam/sasong-trender/hm-studio-ss22.html')]", "xpath:href"],
+        ["xpath=//li[3]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'H&M Studio SS22')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "39c48fb1-ea87-469c-bf30-19bc16def2ae",
+      "comment": "Check if H&M logo is available in corner when you leave homepage",
+      "command": "verifyElementPresent",
+      "target": "linkText=HM.com",
+      "targets": [
+        ["linkText=HM.com", "linkText"],
+        ["css=.menu__hm", "css:finder"],
+        ["xpath=//a[contains(@href, '/sv_se/index.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'HM.com')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e45bba3f-bfd7-44b5-91bb-dfc89b297bb0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=HM.com",
+      "targets": [
+        ["linkText=HM.com", "linkText"],
+        ["css=.menu__hm", "css:finder"],
+        ["xpath=//a[contains(@href, '/sv_se/index.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'HM.com')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9e4b931f-976b-4f6b-a492-9f3d520d8ab8",
+    "name": "shoppingcart",
+    "commands": [{
+      "id": "8acdcab8-8756-4fa5-8ccb-8fa0ed99a56d",
+      "comment": "Testar om jag kan lägga till en vara i min kundkorg.",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e6d9de2-c4b2-4970-8250-4aa1f656d710",
+      "comment": "",
+      "command": "open",
+      "target": "https://www2.hm.com/sv_se/index.html?orgtld=hm.se",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b2eec4e-b9b9-4a08-838d-362ae6010ca1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "971x1045",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "adf194a2-a524-4091-a9a1-4e541d61bf52",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu__trigger",
+      "targets": [
+        ["css=.menu__trigger", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "602db0c1-255c-4eae-bcb4-bd5a81b777ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu__super:nth-child(2) > .menu__super-link > span",
+      "targets": [
+        ["css=.menu__super:nth-child(2) > .menu__super-link > span", "css:finder"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Dam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4b80ec5-4658-47a2-b833-7c7f7ec88efe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Klänningar",
+      "targets": [
+        ["linkText=Klänningar", "linkText"],
+        ["css=.is-open > .menu--unfolded .menu__item:nth-child(2) > .menu__sub-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Klänningar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/dam/produkter/klanningar.html')]", "xpath:href"],
+        ["xpath=//li[5]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Klänningar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5458ca9c-9e0a-4679-becc-df0b88f1ef82",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-item:nth-child(4) .item-image",
+      "targets": [
+        ["css=.product-item:nth-child(4) .item-image", "css:finder"],
+        ["xpath=(//img[@alt='Klänning med krageModell'])[2]", "xpath:img"],
+        ["xpath=//div[@id='page-content']/div/div[3]/ul/li[4]/article/div/a/img", "xpath:idRelative"],
+        ["xpath=//li[4]/article/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3a0a8f7-6c29-40fe-b1a3-b58359d5201f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inner:nth-child(1)",
+      "targets": [
+        ["css=.inner:nth-child(1)", "css:finder"],
+        ["xpath=//main[@id='main-content']/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "353017d7-9429-4604-bbb2-bd8a7163ec6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.trigger-button > .value",
+      "targets": [
+        ["css=.trigger-button > .value", "css:finder"],
+        ["xpath=//div[@id='picker-1']/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Välj storlek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54fdb722-593d-4a1b-a519-355292879933",
+      "comment": "",
+      "command": "click",
+      "target": "css=.item:nth-child(5) .option",
+      "targets": [
+        ["css=.item:nth-child(5) .option", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='picker-1']/ul/li[5]/div/button", "xpath:idRelative"],
+        ["xpath=//li[5]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2faa2e1-3c72-4173-a96b-00fba2adb6f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-shopping-bag-white",
+      "targets": [
+        ["css=.icon-shopping-bag-white", "css:finder"],
+        ["xpath=//main[@id='main-content']/div[2]/div[2]/div/div/div/div[3]/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,' Lägg till')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0851d44c-f8a3-467a-a199-6d20cce1dd52",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button-big",
+      "targets": [
+        ["css=.button-big", "css:finder"],
+        ["xpath=//main[@id='main-content']/div[2]/div[2]/div/div/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,' Lägg till')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d1b5d5f-b4bf-455d-98f9-cf7b9ec6ac1f",
+      "comment": "ser om jag fått en produkt i min varukorg.",
+      "command": "assertValue",
+      "target": "css=.shoppingbag-item-count",
+      "targets": [
+        ["css=.shoppingbag-item-count", "css:finder"],
+        ["xpath=//span/a/span", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "b4faf7ad-e3f0-49ff-a570-c9bf02265d28",
+      "comment": "Det gick INTE att lägga till en vara i min varukorg. ",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7821c72-1e54-4ff5-8aaa-005808b0cb36",
+      "comment": "Testet lyckades med att misslyckas.",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c4496621-f681-4307-807f-2cf11617847a",
+    "name": "Newly visited product",
+    "commands": [{
+      "id": "fabc8ece-6656-43e1-9ab5-155d4c5f9694",
+      "comment": "Testing to visit a product, then return to homepage and see if the product is added to \"recently visited\"",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccb71dd7-f4a0-4325-8573-b1e2a157bbff",
+      "comment": "",
+      "command": "open",
+      "target": "https://www2.hm.com/sv_se/index.html?orgtld=hm.se",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1c6b053-89ef-4d31-83a6-60c1f579d4d8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "971x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c581291-94bb-4613-9907-c87eb1469b36",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu__trigger",
+      "targets": [
+        ["css=.menu__trigger", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65c4f7f5-b418-4469-ab21-bd2669ea69d1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Dam",
+      "targets": [
+        ["linkText=Dam", "linkText"],
+        ["css=.menu__super:nth-child(2) > .menu__super-link", "css:finder"],
+        ["xpath=//a[contains(@href, '/sv_se/dam.html')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Dam')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5200bba5-c478-44ef-89bc-cf8b3fe3a4bf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Toppar",
+      "targets": [
+        ["linkText=Toppar", "linkText"],
+        ["css=.is-open > .menu--unfolded .menu__item:nth-child(3) > .menu__sub-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Toppar')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/dam/produkter/toppar.html')]", "xpath:href"],
+        ["xpath=//li[4]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Toppar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccb62fb0-9f3b-4cde-965c-9e126488070a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,266.79998779296875)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23468a24-beb5-4509-8940-9c3223d7c9f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-item:nth-child(1) .item-image",
+      "targets": [
+        ["css=.product-item:nth-child(1) .item-image", "css:finder"],
+        ["xpath=//img[@alt='Croppad topp med halvpoloModell']", "xpath:img"],
+        ["xpath=//div[@id='page-content']/div/div[3]/ul/li/article/div/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52ab4c53-4a02-480a-b348-cc4fa19272f0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=HM.com",
+      "targets": [
+        ["linkText=HM.com", "linkText"],
+        ["css=.menu__hm", "css:finder"],
+        ["xpath=//a[contains(@href, '/sv_se/index.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'HM.com')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "feaa2da1-fcf1-4138-bbc9-aaf9effe7a97",
+      "comment": "Ser efter om den finns med under \"nyligen besökta\"",
+      "command": "assertText",
+      "target": "linkText=Croppad topp med halvpolo",
+      "targets": [
+        ["linkText=Croppad topp med halvpolo", "linkText"],
+        ["css=.pra15:nth-child(1) .slick-slide:nth-child(1) .ProductDetails-module--ItemDetails__1b2Hu:nth-child(2) .CTA-module--action__3rYxf:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Croppad topp med halvpolo')]", "xpath:link"],
+        ["xpath=//main[@id='main-content']/div/div[3]/section[3]/hm-personalized-reco-carousel/div/div/div[2]/div/div/div/div/article/div[2]/div/h3/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/sv_se/productpage.1010546006.html')])[2]", "xpath:href"],
+        ["xpath=//h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Croppad topp med halvpolo')]", "xpath:innerText"]
+      ],
+      "value": "Croppad topp med halvpolo"
+    }]
+  }, {
+    "id": "48f26214-6ea7-4448-aa92-fc8d559890aa",
+    "name": "Try log in with capslock activated",
+    "commands": [{
+      "id": "81a169c3-0400-4656-bb8d-634cf098f245",
+      "comment": "Testar att logga in med capslock aktiverat. Förväntar mig att det ska accepteras och att jag loggas in.",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50a73318-544b-40e4-862e-703e3f1a71a0",
+      "comment": "",
+      "command": "open",
+      "target": "https://www2.hm.com/sv_se/index.html?orgtld=hm.se",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ddd4814-5d40-4c2c-b541-40afc041ae11",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "971x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f8cb2aa-f6fc-416b-a5b5-389c4d1e585d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logga in",
+      "targets": [
+        ["linkText=Logga in", "linkText"],
+        ["css=.menu__myhm:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Logga in')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4eb6061b-501b-42c7-bb75-e4164a091a26",
+      "comment": "",
+      "command": "type",
+      "target": "id=modal-txt-signin-email",
+      "targets": [
+        ["id=modal-txt-signin-email", "id"],
+        ["name=j_username", "name"],
+        ["css=#modal-txt-signin-email", "css:finder"],
+        ["xpath=//input[@id='modal-txt-signin-email']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "LOUISE920@HOTMAIL.COM"
+    }, {
+      "id": "487c0909-e90a-4121-a7ff-dcd4a1db2930",
+      "comment": "",
+      "command": "click",
+      "target": "id=modal-txt-signin-password",
+      "targets": [
+        ["id=modal-txt-signin-password", "id"],
+        ["name=j_password", "name"],
+        ["css=#modal-txt-signin-password", "css:finder"],
+        ["xpath=//input[@id='modal-txt-signin-password']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "489231ee-c0ab-4107-b3da-e365a6902af0",
+      "comment": "",
+      "command": "type",
+      "target": "id=modal-txt-signin-password",
+      "targets": [
+        ["id=modal-txt-signin-password", "id"],
+        ["name=j_password", "name"],
+        ["css=#modal-txt-signin-password", "css:finder"],
+        ["xpath=//input[@id='modal-txt-signin-password']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": "MYHYSTERIA920"
+    }, {
+      "id": "6ce00d95-8a0c-40e2-89b0-dc4a0621176d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-set-session-storage",
+      "targets": [
+        ["css=.js-set-session-storage", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/button", "xpath:idRelative"],
+        ["xpath=//div/form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7379e7b-7abd-49f1-9124-0425383e8896",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=modal-txt-signin-password-unknown-error-type-error",
+      "targets": [
+        ["id=modal-txt-signin-password-unknown-error-type-error", "id"],
+        ["css=#modal-txt-signin-password-unknown-error-type-error", "css:finder"],
+        ["xpath=//span[@id='modal-txt-signin-password-unknown-error-type-error']", "xpath:attributes"],
+        ["xpath=//form[@id='modal-theLoginForm']/div[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Fel e-postadress eller lösenord, försök igen.')]", "xpath:innerText"]
+      ],
+      "value": "Fel e-postadress eller lösenord, försök igen."
+    }]
+  }, {
+    "id": "477c0cf2-8542-4d06-ba59-ad45035be59d",
+    "name": "add favorites w/o being logged in",
+    "commands": [{
+      "id": "f2707445-1e0d-4bc7-a740-c157eb6887c2",
+      "comment": "",
+      "command": "open",
+      "target": "https://www2.hm.com/sv_se/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f6aabc4-53c2-4748-ae7e-112eb12a2e92",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f193a7f1-b381-43a0-befa-d8c11ef245fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.PriceModule-module--campaignPriceName__2kzKS",
+      "targets": [
+        ["css=.PriceModule-module--campaignPriceName__2kzKS", "css:finder"],
+        ["xpath=//a[@id='threebytwo-item0']/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Mönstrat kuddfodral i bomull')]", "xpath:innerText"]
+      ],
+      "value": "Mönstrat kuddfodral i bomull"
+    }, {
+      "id": "b30b4451-e224-49c6-9d10-043674b00f80",
+      "comment": "",
+      "command": "click",
+      "target": "id=favourite_",
+      "targets": [
+        ["id=favourite_", "id"],
+        ["css=#favourite_", "css:finder"],
+        ["xpath=//button[@id='favourite_']", "xpath:attributes"],
+        ["xpath=//main[@id='main-content']/div[2]/div[2]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'SPARA SOM FAVORIT')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f6b51e1-c145-480f-a8f4-000827473db0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Favoriter",
+      "targets": [
+        ["linkText=Favoriter", "linkText"],
+        ["css=.menu__favorites", "css:finder"],
+        ["xpath=//a[contains(text(),'Favoriter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/favourites')]", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Favoriter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eab690dc-b968-42c9-95c9-191f9cafc028",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Favoriter",
+      "targets": [
+        ["linkText=Favoriter", "linkText"],
+        ["css=.menu__favorites", "css:finder"],
+        ["xpath=//a[contains(text(),'Favoriter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/favourites')]", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Favoriter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5274c21-de93-4dcb-94cd-72c43eaa8087",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Mönstrat kuddfodral i bomull",
+      "targets": [
+        ["linkText=Mönstrat kuddfodral i bomull", "linkText"],
+        ["css=.ListGrid-module--item__o1rPP:nth-child(1) .BodyText-module--general__2yKZb > .CTA-module--action__3hGPH", "css:finder"],
+        ["xpath=//a[contains(text(),'Mönstrat kuddfodral i bomull')]", "xpath:link"],
+        ["xpath=//main[@id='main-content']/div[2]/ul/li/article/div[2]/div/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www2.hm.com/sv_se/productpage.1025259002.html')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Mönstrat kuddfodral i bomull')]", "xpath:innerText"]
+      ],
+      "value": "Mönstrat kuddfodral i bomull"
+    }]
+  }],
+  "suites": [{
+    "id": "ef50167a-3bda-4560-8413-afef6df6f384",
+    "name": "HM Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["65455f0f-b3dd-4334-8475-dd8151c293ab", "c4496621-f681-4307-807f-2cf11617847a", "48f26214-6ea7-4448-aa92-fc8d559890aa", "477c0cf2-8542-4d06-ba59-ad45035be59d", "9e4b931f-976b-4f6b-a492-9f3d520d8ab8"]
+  }],
+  "urls": ["https://www2.hm.com/", "https://www2.hm.com/sv_se/index.html?orgtld=hm.se", "https://www2.hm.com/sv_se/index.html"],
+  "plugins": []
+}
