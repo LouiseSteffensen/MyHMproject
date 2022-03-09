@@ -304,55 +304,50 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "167c1353-35b8-4993-9be6-e0072722cd46",
+      "id": "08c584a1-c012-4f96-8340-2590ac34b957",
       "comment": "",
       "command": "click",
-      "target": "css=.menu__trigger",
+      "target": "css=.menu__super--open > .menu__super-link > span",
       "targets": [
-        ["css=.menu__trigger", "css:finder"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Menu')]", "xpath:innerText"]
+        ["css=.menu__super--open > .menu__super-link > span", "css:finder"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Dam')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "5dd501d0-aab4-44e5-b49e-54237728116a",
+      "id": "fa75ba41-e87b-4c1e-82be-f10474da4223",
       "comment": "",
       "command": "click",
-      "target": "css=.menu__super:nth-child(7) > .menu__super-link > span",
+      "target": "linkText=Kläder",
       "targets": [
-        ["css=.menu__super:nth-child(7) > .menu__super-link > span", "css:finder"],
-        ["xpath=//ul[2]/li[7]/a/span", "xpath:position"],
-        ["xpath=//span[contains(.,'H&M HOME')]", "xpath:innerText"]
+        ["linkText=Kläder", "linkText"],
+        ["css=.list-group:nth-child(1) .item:nth-child(2) > .link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Kläder')])[13]", "xpath:link"],
+        ["xpath=//ul[@id='menu-links']/li/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/sv_se/dam/nyheter/klader.html')])[2]", "xpath:href"],
+        ["xpath=//nav/ul/li/ul/li[2]/a", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "ca1bd21b-678e-44e4-94ad-467bebff2356",
+      "id": "ae679a5b-305c-4211-b304-aae009154879",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,336.5666809082031)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70f75400-f099-48f1-b02d-fe7dddfb1779",
       "comment": "",
       "command": "click",
-      "target": "linkText=Dekorationer",
+      "target": "css=.product-item:nth-child(3) .favorite",
       "targets": [
-        ["linkText=Dekorationer", "linkText"],
-        ["css=.is-open > .menu--unfolded .menu__item:nth-child(3) > .menu__sub-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Dekorationer')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/sv_se/home/produkter/dekoration.html')]", "xpath:href"],
-        ["xpath=//li[7]/ul/li[5]/ul/li[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Dekorationer')]", "xpath:innerText"]
+        ["css=.product-item:nth-child(3) .favorite", "css:finder"],
+        ["xpath=//div[@id='page-content']/div/div[3]/ul/li[3]/article/div/a/div/button", "xpath:idRelative"],
+        ["xpath=//li[3]/article/div/a/div/button", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "f038b250-4e7f-46e7-b6dc-9c426a9f222b",
-      "comment": "",
-      "command": "click",
-      "target": "css=.product-item:nth-child(1) .favorite",
-      "targets": [
-        ["css=.product-item:nth-child(1) .favorite", "css:finder"],
-        ["xpath=//div[@id='page-content']/div/div[3]/ul/li/article/div/a/div/button", "xpath:idRelative"],
-        ["xpath=//a/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'SPARA SOM FAVORIT')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "fdcc6c50-9c69-4872-8017-b825258d6447",
+      "id": "b93f226e-98a9-407c-a1a0-cbe9a872abb7",
       "comment": "",
       "command": "click",
       "target": "linkText=Favoriter",
@@ -361,120 +356,38 @@
         ["css=.menu__favorites", "css:finder"],
         ["xpath=//a[contains(text(),'Favoriter')]", "xpath:link"],
         ["xpath=//a[contains(@href, '/sv_se/favourites')]", "xpath:href"],
-        ["xpath=//nav/ul/li[3]/a", "xpath:position"]
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Favoriter')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "2941848e-88ec-45ac-98cc-c733d2b6ed6d",
+      "id": "a16bd4e6-7d54-4a7d-acae-7f8f94644046",
       "comment": "",
-      "command": "click",
+      "command": "assertText",
+      "target": "linkText=Oversized jeansjacka",
+      "targets": [
+        ["linkText=Oversized jeansjacka", "linkText"],
+        ["css=.ListGrid-module--item__o1rPP:nth-child(1) .BodyText-module--general__2yKZb > .CTA-module--action__3hGPH", "css:finder"],
+        ["xpath=//a[contains(text(),'Oversized jeansjacka')]", "xpath:link"],
+        ["xpath=//main[@id='main-content']/div[2]/ul/li/article/div[2]/div/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www2.hm.com/sv_se/productpage.1061301001.html')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Oversized jeansjacka')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68d7f560-8502-4260-b0e7-8270cd49d636",
+      "comment": "Check that you are still not logged in, as long as \"logga in\" text is available",
+      "command": "assertText",
       "target": "linkText=Logga in",
       "targets": [
         ["linkText=Logga in", "linkText"],
         ["css=.menu__myhm:nth-child(1)", "css:finder"],
         ["xpath=//a[contains(text(),'Logga in')]", "xpath:link"],
         ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
-        ["xpath=//div/a", "xpath:position"]
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logga in')]", "xpath:innerText"]
       ],
-      "value": ""
-    }, {
-      "id": "134399f9-3862-4a16-b6b0-61c2e2a1d405",
-      "comment": "",
-      "command": "type",
-      "target": "id=modal-txt-signin-email",
-      "targets": [
-        ["id=modal-txt-signin-email", "id"],
-        ["name=j_username", "name"],
-        ["css=#modal-txt-signin-email", "css:finder"],
-        ["xpath=//input[@id='modal-txt-signin-email']", "xpath:attributes"],
-        ["xpath=//form[@id='modal-theLoginForm']/div/input", "xpath:idRelative"],
-        ["xpath=//form/div/input", "xpath:position"]
-      ],
-      "value": "louise920@hotmail.com"
-    }, {
-      "id": "01835b34-5036-428b-b192-5dc2ec59d1c1",
-      "comment": "",
-      "command": "click",
-      "target": "id=modal-txt-signin-password",
-      "targets": [
-        ["id=modal-txt-signin-password", "id"],
-        ["name=j_password", "name"],
-        ["css=#modal-txt-signin-password", "css:finder"],
-        ["xpath=//input[@id='modal-txt-signin-password']", "xpath:attributes"],
-        ["xpath=//form[@id='modal-theLoginForm']/div[2]/input", "xpath:idRelative"],
-        ["xpath=//form/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "4f849c1c-7831-4bd7-b82a-c5ec2b91382c",
-      "comment": "",
-      "command": "click",
-      "target": "id=modal-txt-signin-password",
-      "targets": [
-        ["id=modal-txt-signin-password", "id"],
-        ["name=j_password", "name"],
-        ["css=#modal-txt-signin-password", "css:finder"],
-        ["xpath=//input[@id='modal-txt-signin-password']", "xpath:attributes"],
-        ["xpath=//form[@id='modal-theLoginForm']/div[2]/input", "xpath:idRelative"],
-        ["xpath=//form/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "285c57ab-ff84-49ed-a8e3-a3390c4b3368",
-      "comment": "",
-      "command": "type",
-      "target": "id=modal-txt-signin-password",
-      "targets": [
-        ["id=modal-txt-signin-password", "id"],
-        ["name=j_password", "name"],
-        ["css=#modal-txt-signin-password", "css:finder"],
-        ["xpath=//input[@id='modal-txt-signin-password']", "xpath:attributes"],
-        ["xpath=//form[@id='modal-theLoginForm']/div[2]/input", "xpath:idRelative"],
-        ["xpath=//form/div[2]/input", "xpath:position"]
-      ],
-      "value": "Myhysteria920"
-    }, {
-      "id": "40ae3878-b61f-4173-bdc7-8955f84eb0c5",
-      "comment": "",
-      "command": "click",
-      "target": "css=.js-set-session-storage",
-      "targets": [
-        ["css=.js-set-session-storage", "css:finder"],
-        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
-        ["xpath=//form[@id='modal-theLoginForm']/button", "xpath:idRelative"],
-        ["xpath=//div/form/button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "b4a09d2a-d784-497e-9fe7-a410bf994803",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.js-set-session-storage",
-      "targets": [
-        ["css=.js-set-session-storage", "css:finder"],
-        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
-        ["xpath=//form[@id='modal-theLoginForm']/button", "xpath:idRelative"],
-        ["xpath=//div/form/button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c19b3948-4a23-42c1-a7a5-c8ecf646b4cd",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.js-set-session-storage",
-      "targets": [
-        ["css=.js-set-session-storage", "css:finder"],
-        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
-        ["xpath=//form[@id='modal-theLoginForm']/button", "xpath:idRelative"],
-        ["xpath=//div/form/button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "f86130fe-02bc-40c1-8888-5b7eccd7ac58",
-      "comment": "",
-      "command": "assertChecked",
-      "target": "",
-      "targets": [],
       "value": ""
     }]
   }, {
