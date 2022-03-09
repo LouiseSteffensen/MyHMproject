@@ -2,7 +2,7 @@
   "id": "6abfc6af-d59b-4717-9c99-c0f0fc41ba32",
   "version": "2.0",
   "name": "HM",
-  "url": "https://www2.hm.com/sv_se/index.html?orgtld=hm.se",
+  "url": "https://www2.hm.com/sv_se/index.html",
   "tests": [{
     "id": "65455f0f-b3dd-4334-8475-dd8151c293ab",
     "name": "Homepage logo",
@@ -294,103 +294,6 @@
       "value": ""
     }]
   }, {
-    "id": "737ba747-cbb6-4079-a8d6-cf183aec91ad",
-    "name": "Add favorites w/o logged in",
-    "commands": [{
-      "id": "9c635f6a-c698-4b83-a2ee-89d348d3d284",
-      "comment": "Testing to add a product to my favorites without being logged in",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "08c584a1-c012-4f96-8340-2590ac34b957",
-      "comment": "",
-      "command": "click",
-      "target": "css=.menu__super--open > .menu__super-link > span",
-      "targets": [
-        ["css=.menu__super--open > .menu__super-link > span", "css:finder"],
-        ["xpath=//li[2]/a/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Dam')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "fa75ba41-e87b-4c1e-82be-f10474da4223",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Kläder",
-      "targets": [
-        ["linkText=Kläder", "linkText"],
-        ["css=.list-group:nth-child(1) .item:nth-child(2) > .link", "css:finder"],
-        ["xpath=(//a[contains(text(),'Kläder')])[13]", "xpath:link"],
-        ["xpath=//ul[@id='menu-links']/li/ul/li[2]/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '/sv_se/dam/nyheter/klader.html')])[2]", "xpath:href"],
-        ["xpath=//nav/ul/li/ul/li[2]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "ae679a5b-305c-4211-b304-aae009154879",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,336.5666809082031)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "70f75400-f099-48f1-b02d-fe7dddfb1779",
-      "comment": "",
-      "command": "click",
-      "target": "css=.product-item:nth-child(3) .favorite",
-      "targets": [
-        ["css=.product-item:nth-child(3) .favorite", "css:finder"],
-        ["xpath=//div[@id='page-content']/div/div[3]/ul/li[3]/article/div/a/div/button", "xpath:idRelative"],
-        ["xpath=//li[3]/article/div/a/div/button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "b93f226e-98a9-407c-a1a0-cbe9a872abb7",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Favoriter",
-      "targets": [
-        ["linkText=Favoriter", "linkText"],
-        ["css=.menu__favorites", "css:finder"],
-        ["xpath=//a[contains(text(),'Favoriter')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/sv_se/favourites')]", "xpath:href"],
-        ["xpath=//nav/ul/li[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Favoriter')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a16bd4e6-7d54-4a7d-acae-7f8f94644046",
-      "comment": "",
-      "command": "assertText",
-      "target": "linkText=Oversized jeansjacka",
-      "targets": [
-        ["linkText=Oversized jeansjacka", "linkText"],
-        ["css=.ListGrid-module--item__o1rPP:nth-child(1) .BodyText-module--general__2yKZb > .CTA-module--action__3hGPH", "css:finder"],
-        ["xpath=//a[contains(text(),'Oversized jeansjacka')]", "xpath:link"],
-        ["xpath=//main[@id='main-content']/div[2]/ul/li/article/div[2]/div/h2/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, 'https://www2.hm.com/sv_se/productpage.1061301001.html')])[2]", "xpath:href"],
-        ["xpath=//h2/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Oversized jeansjacka')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "68d7f560-8502-4260-b0e7-8270cd49d636",
-      "comment": "Check that you are still not logged in, as long as \"logga in\" text is available",
-      "command": "assertText",
-      "target": "linkText=Logga in",
-      "targets": [
-        ["linkText=Logga in", "linkText"],
-        ["css=.menu__myhm:nth-child(1)", "css:finder"],
-        ["xpath=//a[contains(text(),'Logga in')]", "xpath:link"],
-        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
-        ["xpath=//div/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Logga in')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }]
-  }, {
     "id": "c4496621-f681-4307-807f-2cf11617847a",
     "name": "Newly visited product",
     "commands": [{
@@ -606,6 +509,93 @@
       ],
       "value": "Fel e-postadress eller lösenord, försök igen."
     }]
+  }, {
+    "id": "477c0cf2-8542-4d06-ba59-ad45035be59d",
+    "name": "add favorites w/o being logged in",
+    "commands": [{
+      "id": "f2707445-1e0d-4bc7-a740-c157eb6887c2",
+      "comment": "",
+      "command": "open",
+      "target": "https://www2.hm.com/sv_se/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f6aabc4-53c2-4748-ae7e-112eb12a2e92",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f193a7f1-b381-43a0-befa-d8c11ef245fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.PriceModule-module--campaignPriceName__2kzKS",
+      "targets": [
+        ["css=.PriceModule-module--campaignPriceName__2kzKS", "css:finder"],
+        ["xpath=//a[@id='threebytwo-item0']/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Mönstrat kuddfodral i bomull')]", "xpath:innerText"]
+      ],
+      "value": "Mönstrat kuddfodral i bomull"
+    }, {
+      "id": "b30b4451-e224-49c6-9d10-043674b00f80",
+      "comment": "",
+      "command": "click",
+      "target": "id=favourite_",
+      "targets": [
+        ["id=favourite_", "id"],
+        ["css=#favourite_", "css:finder"],
+        ["xpath=//button[@id='favourite_']", "xpath:attributes"],
+        ["xpath=//main[@id='main-content']/div[2]/div[2]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'SPARA SOM FAVORIT')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f6b51e1-c145-480f-a8f4-000827473db0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Favoriter",
+      "targets": [
+        ["linkText=Favoriter", "linkText"],
+        ["css=.menu__favorites", "css:finder"],
+        ["xpath=//a[contains(text(),'Favoriter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/favourites')]", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Favoriter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eab690dc-b968-42c9-95c9-191f9cafc028",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Favoriter",
+      "targets": [
+        ["linkText=Favoriter", "linkText"],
+        ["css=.menu__favorites", "css:finder"],
+        ["xpath=//a[contains(text(),'Favoriter')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/sv_se/favourites')]", "xpath:href"],
+        ["xpath=//nav/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Favoriter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5274c21-de93-4dcb-94cd-72c43eaa8087",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Mönstrat kuddfodral i bomull",
+      "targets": [
+        ["linkText=Mönstrat kuddfodral i bomull", "linkText"],
+        ["css=.ListGrid-module--item__o1rPP:nth-child(1) .BodyText-module--general__2yKZb > .CTA-module--action__3hGPH", "css:finder"],
+        ["xpath=//a[contains(text(),'Mönstrat kuddfodral i bomull')]", "xpath:link"],
+        ["xpath=//main[@id='main-content']/div[2]/ul/li/article/div[2]/div/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www2.hm.com/sv_se/productpage.1025259002.html')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Mönstrat kuddfodral i bomull')]", "xpath:innerText"]
+      ],
+      "value": "Mönstrat kuddfodral i bomull"
+    }]
   }],
   "suites": [{
     "id": "08ef80d8-b0ae-4c30-9cc2-a9e329d7468c",
@@ -615,6 +605,6 @@
     "timeout": 300,
     "tests": []
   }],
-  "urls": ["https://www2.hm.com/", "https://www2.hm.com/sv_se/index.html?orgtld=hm.se"],
+  "urls": ["https://www2.hm.com/", "https://www2.hm.com/sv_se/index.html?orgtld=hm.se", "https://www2.hm.com/sv_se/index.html"],
   "plugins": []
 }
