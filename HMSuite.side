@@ -535,9 +535,9 @@
         ["css=.PriceModule-module--campaignPriceName__2kzKS", "css:finder"],
         ["xpath=//a[@id='threebytwo-item0']/div[2]/span", "xpath:idRelative"],
         ["xpath=//div[2]/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Mönstrat kuddfodral i bomull')]", "xpath:innerText"]
+        ["xpath=//span[contains(.,'Ytterkruka i keramik')]", "xpath:innerText"]
       ],
-      "value": "Mönstrat kuddfodral i bomull"
+      "value": "Ytterkruka i keramik"
     }, {
       "id": "b30b4451-e224-49c6-9d10-043674b00f80",
       "comment": "",
@@ -584,17 +584,17 @@
       "id": "a5274c21-de93-4dcb-94cd-72c43eaa8087",
       "comment": "",
       "command": "assertText",
-      "target": "linkText=Mönstrat kuddfodral i bomull",
+      "target": "linkText=Ytterkruka i keramik",
       "targets": [
-        ["linkText=Mönstrat kuddfodral i bomull", "linkText"],
+        ["linkText=Ytterkruka i keramik", "linkText"],
         ["css=.ListGrid-module--item__o1rPP:nth-child(1) .BodyText-module--general__2yKZb > .CTA-module--action__3hGPH", "css:finder"],
-        ["xpath=//a[contains(text(),'Mönstrat kuddfodral i bomull')]", "xpath:link"],
+        ["xpath=//a[contains(text(),'Ytterkruka i keramik')]", "xpath:link"],
         ["xpath=//main[@id='main-content']/div[2]/ul/li/article/div[2]/div/h2/a", "xpath:idRelative"],
         ["xpath=(//a[contains(@href, 'https://www2.hm.com/sv_se/productpage.1025259002.html')])[2]", "xpath:href"],
         ["xpath=//h2/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Mönstrat kuddfodral i bomull')]", "xpath:innerText"]
+        ["xpath=//a[contains(.,'Ytterkruka i keramik')]", "xpath:innerText"]
       ],
-      "value": "Mönstrat kuddfodral i bomull"
+      "value": "Ytterkruka i keramik"
     }]
   }],
   "suites": [{
